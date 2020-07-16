@@ -61,15 +61,11 @@ Specification
 -------------
 """
 
-import sys
-import os
 import socket
 import threading
 from six import PY3
 from six.moves import queue
-import re
 from types import *
-from time import sleep
 
 EOL = '\r\n'
 
@@ -304,7 +300,6 @@ class Manager(object):
         multiline = False
         status = False
         wait_for_marker = False
-        eolcount = 0
         # loop while we are still running and connected
         while self._running.isSet() and self._connected.isSet():
             try:
