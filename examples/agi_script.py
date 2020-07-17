@@ -6,7 +6,7 @@ Example to get and set variables via AGI.
 You can call directly this script with AGI() in Asterisk dialplan.
 """
 
-from asterisk.agi import *
+from asterisk.agi import AGI
 
 agi = AGI()
 
